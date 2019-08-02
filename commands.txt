@@ -1,0 +1,7 @@
+
+// some commands for basic use
+
+
+              1:  git config --list --show-origin   (show some basci settings)
+
+              2:

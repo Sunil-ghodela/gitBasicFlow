@@ -1,0 +1,90 @@
+
+
+These other systems (CVS, Subversion, Perforce, Bazaar, and so on) use:
+
+       ---think of the information they store as a set of files and the changes made to each file over time--
+
+       ---this is called  delta-based version control---
+
+
+
+How git handle file change over these systems:
+
+        ---Git basically takes a picture of what all your files look like at that moment----
+                                        &
+                    ---stores a reference to that snapshot---
+
+        |-----------| |-----------| |-----------| |-----------| |-----------|
+        | Version 1 | | Version 2 | | Version 3 | | Version 4 | | Version 5 |
+        |-----|------| |-----------| |-----------| |-----------| |-----------|
+              |
+          [File A]          (A1)         (A1)           (A2)          (A2)
+              |
+          [File B]          (B)          (B)            (B1)          (B2)
+              |
+          [File C]          (C1)         (C2)           (C2)          (C3)
+
+                  (Storing data as snapshots of the project with change)
+
+
+
+Git Has Integrity:
+
+    ---it’s impossible to change the contents of any file or directory without Git knowing about it---
+
+            ---The mechanism that Git uses for this checksumming is called a SHA-1 hash---
+
+                    --This is a 40-character string--- &
+
+                    ---calculated based on the contents of a file--- OR ---directory structure in Git---
+
+
+            ---Git stores everything in its database by the hash value of its contents---
+
+
+
+The Three States:
+
+        These 3 States are:
+            1: modified
+            2: staged
+            3: committed
+
+
+        Modified:  Changed the file BUT not committed to database...
+        Staged:    Middle stage before snapshot saving in DB...
+        Committed: snapshot of project saved...
+
+
+
+       |----------|     |----------|               |----------------|
+       | Working  |     |  Staging |               | .git(directory)|
+       |----------|     |----------|               |----------------|
+            |                |                                |
+            |<<<<<------Checkout the project------------------|
+            |                |                                |
+            |                |                                |
+            |-Staged-fixes->>|                                |
+            |                |                                |
+            |                |                                |
+            |                |-------Committed------------->>>|
+
+
+
+
+Getting a Git Repository:
+
+                         ---There is only 2 way can can start with Git---
+        1: You can take a local directory that is currently not under version control, and turn it into a Git repository
+                command for it to starting project
+                1: git init
+
+        2: You can clone an existing Git repository from elsewhere
+
+               1: git clone ----url---
+               2: git clone ----url---  targetDirectory (Target directory to start project in specific folder)
+
+
+
+Git Basics - Recording Changes to the Repository:
+
