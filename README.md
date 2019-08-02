@@ -1,2 +1,6 @@
 # gitBasicFlow
-Git flow , it's common commands for daily use
+How does git work,
+
+daily use command,
+
+how to start with it
