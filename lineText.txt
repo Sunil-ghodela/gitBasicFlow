@@ -88,3 +88,31 @@ Getting a Git Repository:
 
 Git Basics - Recording Changes to the Repository:
 
+        ---Remember that each file in your working directory can be in one of two states---
+
+            1: Tracked (They can be unmodified, modified, or staged)
+            2: Untracked (Anything in working directory which is not in last snapshot and not in staging area)
+
+
+
+
+        |-----------|     |------------|               |----------------|               |----------|
+        | Untracked |     | Unmodified |               |  Modified      |               |  Staged  |
+        |-----------|     |------------|               |----------------|               |----------|
+
+
+        1: add file: ---------------------->>>> Staged
+
+        2: commit : Staged ------------------------>>>> Unmodified
+
+        3: Edit(traked file [Staged file]): Unmodified----------------------->>>>> modified
+
+        4: remove file: Unmodified--------------------------------------------------------------->>>>>> Untracked
+
+        5: steged the file: modified-------------------------------------------------------------------------------->>>>>>>> Staged
+
+
+
+
+
+
