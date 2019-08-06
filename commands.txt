@@ -4,4 +4,32 @@
 
               1:  git config --list --show-origin   (show some basci settings)
 
-              2:
+              2: git status -s( for short status of file)
+
+                    A: new files that have been added to the staging area
+
+                    M: modified files
+
+
+
+// Ignoring file in  .gitingnore
+
+    # ignore all .a files
+    *.a
+
+    # but do track lib.a, even though you're ignoring .a files above
+    !lib.a
+
+    # only ignore the TODO file in the current directory, not subdir/TODO
+    /TODO
+
+    # ignore all files in any directory named build
+    build/
+
+    # ignore doc/notes.txt, but not doc/server/arch.txt
+    doc/*.txt
+
+    # ignore all .pdf files in the doc/ directory and any of its subdirectories
+    doc/**/*.pdf
+
+    for refrence: https://github.com/github/gitignore/blob/master/Python.gitignore

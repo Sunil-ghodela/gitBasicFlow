@@ -95,7 +95,7 @@ Git Basics - Recording Changes to the Repository:
 
 
 
-
+        working tree                                                                     Stagin area
         |-----------|     |------------|               |----------------|               |----------|
         | Untracked |     | Unmodified |               |  Modified      |               |  Staged  |
         |-----------|     |------------|               |----------------|               |----------|
@@ -110,6 +110,7 @@ Git Basics - Recording Changes to the Repository:
         4: remove file: Unmodified--------------------------------------------------------------->>>>>> Untracked
 
         5: steged the file: modified-------------------------------------------------------------------------------->>>>>>>> Staged
+
 
 
 
